@@ -27,9 +27,9 @@ function HeroSnowDrop() {
   return <div className="hero-snow" />;
 }
 
-function Hero({ children }) {
+function Hero({ children, className }) {
   return (
-    <div className="hero">
+    <div className={`hero ${className}`}>
       <Container>{children}</Container>
     </div>
   );

@@ -1,3 +1,4 @@
+import Drive from './drive';
 import Home from './home/home';
 
 export const routes = [
@@ -6,5 +7,13 @@ export const routes = [
     path: '/',
     exact: true,
     auth: false,
+    headerTheme: 'white',
+  },
+  {
+    component: Drive,
+    path: '/drive',
+    exact: true,
+    auth: false,
+    headerTheme: 'blue',
   },
 ];

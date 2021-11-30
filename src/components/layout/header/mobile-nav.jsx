@@ -9,7 +9,6 @@ function MobileNav() {
   const toggle = () => {
     setShowNav((prev) => !prev);
   };
-  console.log(showNav);
 
   return (
     <MobileOnly>
@@ -21,13 +20,19 @@ function MobileNav() {
         <div className="mobile-nav__content">
           <ul>
             <li>
-              <NavLink to="/schedule">Schedule</NavLink>
+              <NavLink to="/" onClick={toggle}>
+                Home
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/drive">Drive</NavLink>
+              <NavLink to="/drive" onClick={toggle}>
+                Drive
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/help">Help</NavLink>
+              <NavLink to="#" onClick={toggle}>
+                Help
+              </NavLink>
             </li>
           </ul>
           <Button theme="blue" color="white" className="content-button">

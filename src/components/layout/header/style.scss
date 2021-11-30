@@ -26,6 +26,29 @@
   }
 }
 
+.header.blue {
+  .nav__link {
+    color: #121a2e;
+
+    &.active {
+      border-bottom: 3px solid #00a5e4;
+      color: #00a5e4;
+    }
+  }
+
+  .menu-icon {
+    background-color: #00a5e4;
+
+    &__line {
+      &,
+      &::after,
+      &::before {
+        background-color: white;
+      }
+    }
+  }
+}
+
 .logo {
   &__image {
     width: 157.5px;

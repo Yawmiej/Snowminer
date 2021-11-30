@@ -1,14 +1,17 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Header from './components/layout/header/index';
+import Layout from './components/layout';
 import { routes } from './pages/_routes';
 
 function App() {
   return (
     <BrowserRouter>
-      <Header />
       <Routes>
-        {routes.map(({ path, component: Component }, index) => (
-          <Route path={path} element={<Component />} key={index} />
+        {routes.map(({ path, component, headerTheme = '' }, index) => (
+          <Route
+            path={path}
+            element={<Layout component={component} headerTheme={headerTheme} />}
+            key={index}
+          />
         ))}
       </Routes>
     </BrowserRouter>

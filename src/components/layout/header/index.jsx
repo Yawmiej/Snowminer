@@ -9,10 +9,11 @@ import Logo2x from '../../../assets/img/png/2x/Logotype.png';
 import { Link, NavLink } from 'react-router-dom';
 import Button from '../../common/button';
 import MobileNav from './mobile-nav';
+import { colors } from '../../../constants';
 
-function Header() {
+function Header({ theme = 'white' }) {
   return (
-    <div className="header">
+    <div className={`header ${theme}`}>
       <Container>
         <div className="header__content">
           <div className="header__content--left">
@@ -32,8 +33,8 @@ function Header() {
             <nav className="nav">
               <ul>
                 <li>
-                  <NavLink to="/schedule" className="nav__link active">
-                    Schedule
+                  <NavLink to="/" className="nav__link">
+                    Home
                   </NavLink>
                 </li>
                 <li>
@@ -42,12 +43,17 @@ function Header() {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="help" className="nav__link">
+                  <NavLink to="/help" className="nav__link">
                     Help
                   </NavLink>
                 </li>
               </ul>
-              <Button variant="solid" theme="white" className="nav__button">
+              <Button
+                variant="solid"
+                theme={theme}
+                color={theme === 'white' ? colors.primary : 'white'}
+                className="nav__button"
+              >
                 Contact Us
               </Button>
             </nav>

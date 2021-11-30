@@ -1,4 +1,5 @@
 import React from 'react';
+import Hero from '../../components/layout/hero';
 
 import './style.scss';
 
@@ -8,14 +9,13 @@ import AppStoreButton2x from '../../assets/img/png/2x/App Store.png';
 import playStoreButton1x from '../../assets/img/png/1x/Google Play.png';
 import playStoreButton2x from '../../assets/img/png/2x/Google Play.png';
 import Image from '../../components/common/image';
-import Hero from '../../components/layout/hero';
 
-function Home() {
+function Drive() {
   return (
-    <main className="home">
-      <Hero className="home__hero">
+    <main className="drive">
+      <Hero className="drive__hero">
         <Hero.Content>
-          <Hero.Heading>Snow removal with a simple tap</Hero.Heading>
+          <Hero.Heading>Earn money on your own schedule</Hero.Heading>
           <Hero.Paragraph>
             Expert snowplow Miners to your driveway or sidewalk in minutes.
             Download the app and start your order!
@@ -39,10 +39,9 @@ function Home() {
         </Hero.Content>
         <Hero.Footer />
         <Hero.SnowDrop />
-        <Hero.SnowDrop />
       </Hero>
     </main>
   );
 }
 
-export default Home;
+export default Drive;
