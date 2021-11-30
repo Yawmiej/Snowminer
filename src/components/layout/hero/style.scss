@@ -1,0 +1,84 @@
+.hero {
+  background-image: linear-gradient(to bottom, #2a7ddb, #18ade7);
+  height: 100vh;
+  padding-top: 12rem;
+  position: relative;
+  display: flex;
+
+  @media (min-width: 1100px) {
+    height: 120vh;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding: 0 1.5rem;
+    color: white;
+    z-index: 2;
+
+    @media (min-width: 1100px) {
+      left: 0;
+      top: 60%;
+      transform: translate(0, -60%);
+      align-items: start;
+      padding-left: 6rem;
+      flex-basis: 40%;
+      width: 40%;
+    }
+  }
+
+  &-heading {
+    font-size: 2.5rem;
+    line-height: 50px;
+    margin-bottom: 2rem;
+  }
+
+  &-paragraph {
+    margin-bottom: 3rem;
+  }
+
+  &-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('../../../assets/img/png/2x/ground-grouped.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 140%;
+    z-index: 1;
+
+    @media (min-width: 1100px) {
+      background-image: url('../../../assets/img/png/2x/chunk.png');
+      background-size: 100%;
+    }
+  }
+
+  &-snow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('../../../assets/img/png/2x/snow-masked.png');
+    background-position: 0 -1000px;
+    background-repeat: repeat-y;
+    background-size: cover;
+    z-index: 1;
+    animation: snowDrop 60s linear infinite;
+  }
+}
+
+@keyframes snowDrop {
+  100% {
+    background-position: 0 0;
+  }
+}

@@ -1,0 +1,41 @@
+.button {
+  padding: 1rem 2.5rem;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: none;
+  outline: none;
+  appearance: none;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  /*
+    Create active and visited state
+  */
+
+  &__icon {
+    font-size: 0.8rem;
+
+    &--left {
+      margin-right: 5px;
+    }
+
+    &--right {
+      margin-left: 5px;
+    }
+  }
+
+  &.shadow {
+    box-shadow: 0 17px 20px rgba(35, 10, 74, 0.15);
+
+    &:active,
+    &:focus {
+      box-shadow: 0 11px 15px rgba(35, 10, 74, 0.15);
+      transform: translateY(4px);
+    }
+  }
+}

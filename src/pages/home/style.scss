@@ -1,0 +1,22 @@
+.home {
+}
+
+.home__hero {
+  &--cta {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    column-gap: 1rem;
+    row-gap: 0.5rem;
+    justify-content: center;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    @media (min-width: 1100px) {
+      justify-content: start;
+    }
+  }
+}
