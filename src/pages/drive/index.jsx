@@ -38,7 +38,6 @@ function Drive() {
           </Hero.CTA>
         </Hero.Content>
         <Hero.Footer />
-        <Hero.SnowDrop />
       </Hero>
     </main>
   );
