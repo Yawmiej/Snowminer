@@ -1,4 +1,4 @@
-# Snowminer Accessment
+# Snowminer Assessment
 
 ## How to run
 
