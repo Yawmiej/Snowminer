@@ -1,5 +1,6 @@
 import React from 'react';
 
+//Displays image based on screen resolution to improve performance
 function Image({ src1x, src2x, alt = '', ...rest }) {
   return (
     <picture {...rest}>
